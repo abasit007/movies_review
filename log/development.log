@@ -5940,3 +5940,98 @@ Entrypoint raty = js/raty-3b6d344f625a1b50cb2c.js js/raty-3b6d344f625a1b50cb2c.j
 Completed 200 OK in 4333ms (Views: 4330.0ms | ActiveRecord: 1.1ms | Allocations: 13273)
 
 
+Started GET "/" for 127.0.0.1 at 2020-05-12 15:45:07 +0500
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:9
+  Rendered movies/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1692)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 130)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.5ms | Allocations: 11005)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-12 15:45:12 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.8ms | Allocations: 523)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1926)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 155)
+Completed 200 OK in 39ms (Views: 38.0ms | ActiveRecord: 0.0ms | Allocations: 12638)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-12 15:48:28 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 543)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1942)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 410)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 13487)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-12 15:48:40 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 543)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1942)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 410)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms | Allocations: 13482)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-12 15:48:55 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 544)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1943)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 2.1ms | Allocations: 410)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.0ms | Allocations: 13493)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-12 15:49:02 +0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"PLDhT+x8fmiw0wQeTuMM7HXocle/gDXHieGPuH0+87sdnYgDqZqwv+H4rHzdH6LZZEudhKlEhHkVEqZ0MrCq4A==", "user"=>{"email"=>"abdulbasit9525@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "abdulbasit9525@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 222ms (ActiveRecord: 1.3ms | Allocations: 3812)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-12 15:49:02 +0500
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/movies/index.html.erb:1
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:9
+  Rendered movies/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 2717)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 127)
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 1.0ms | Allocations: 12817)
+
+
+Started GET "/movies/3" for 127.0.0.1 at 2020-05-12 15:49:04 +0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:57:in `set_movie'
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mReview Load (1.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."movie_id" = $1 ORDER BY created_at desc[0m  [["movie_id", 3]]
+  ↳ app/views/movies/show.html.erb:37
+  Rendered movies/show.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1430)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:16
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 1082)
+Completed 200 OK in 74ms (Views: 67.4ms | ActiveRecord: 3.0ms | Allocations: 12616)
+
+
