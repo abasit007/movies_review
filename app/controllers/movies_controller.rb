@@ -8,6 +8,10 @@ class MoviesController < ApplicationController
     else
       @movies = Movie.all
     end
+    respond_to do |format|
+      format.html
+      format.json { @movies = movies.search(params[:search]) }
+    end
   end
 
   def index
