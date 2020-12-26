@@ -1,16 +1,70 @@
-<h2>Resend confirmation instructions</h2>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+  <head>
+    <title>Datagentibus</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-  </div>
+    <%= stylesheet_link_tag 'app', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'app', 'data-turbolinks-track': 'reload' %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+  </head>
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+
+
+
+
+<%= stylesheet_link_tag 'quality/font-awesome/css/font-awesome', media: 'all', 'data-turbolinks-track': 'reload' %>
+<section class="page-title-section bg-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <ul class="page-breadcrumb text-center"><li><a href="https://quality.webriti.com">Confirmation</a></li><li class="active"><a href="https://quality.webriti.com/about-us/">Resend </a></li></ul> <div class="page-title text-center">
+                <h1>Confirmation <%= resource_name.to_s.humanize %></h1> </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-8 col-xs-12">
+                <div class="news">
+                    <article class="post">
+                        <div class="post-content">
+                            <div class="row v-center">
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <figure class="about-img-area">
+                                        <%= image_tag("confirmation", :class => "img-responsive") %>
+                                    </figure>
+
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <div class="about-content">
+													<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+													  <%= render "devise/shared/error_messages", resource: resource %>
+
+													  <div class="field">
+													    <%= f.label :email %><br />
+													    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+													  </div>
+
+													  <div class="actions">
+													    <%= f.submit "Resend confirmation instructions" %>
+													  </div>
+													<% end %>
+
+													<%= render "users/shared/links" %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+

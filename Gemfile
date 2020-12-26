@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
@@ -26,6 +26,7 @@ gem 'paperclip', '~> 6.1'
 # gem 'image_processing', '~> 1.2'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'jquery-rails'
+gem 'rails_admin', '~> 2.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
